@@ -23,16 +23,20 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="λ">
-<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
+<meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344CC &#x3D; g++TARGET &#x3D; baseINCLUDE :&#x3D; -I.&#x2F;includeLDFLAGS :&#x3D; -L&#x2F;usr&#x2F;local&#x2F;lib -L.LIBS :&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="支持C和C++混合编译的Makefile">
+<meta property="og:url" content="http://example.com/2021/03/18/%E6%94%AF%E6%8C%81C%E5%92%8CC-%E6%B7%B7%E5%90%88%E7%BC%96%E8%AF%91%E7%9A%84Makefile/index.html">
 <meta property="og:site_name" content="λ">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344CC &#x3D; g++TARGET &#x3D; baseINCLUDE :&#x3D; -I.&#x2F;includeLDFLAGS :&#x3D; -L&#x2F;usr&#x2F;local&#x2F;lib -L.LIBS :&amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-18T12:50:18.000Z">
+<meta property="article:modified_time" content="2021-03-18T12:51:59.514Z">
 <meta property="article:author" content="gyk">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/2021/03/">
+<link rel="canonical" href="http://example.com/2021/03/18/%E6%94%AF%E6%8C%81C%E5%92%8CC-%E6%B7%B7%E5%90%88%E7%BC%96%E8%AF%91%E7%9A%84Makefile/">
 
 
 <script class="page-configurations">
@@ -40,11 +44,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
-<title>归档 | λ</title>
+<title>支持C和C++混合编译的Makefile | λ</title>
   
 
 
@@ -196,69 +200,84 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 2 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/18/%E6%94%AF%E6%8C%81C%E5%92%8CC-%E6%B7%B7%E5%90%88%E7%BC%96%E8%AF%91%E7%9A%84Makefile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gyk">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="λ">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          支持C和C++混合编译的Makefile
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="创建时间：2021-03-18 20:50:18 / 修改时间：20:51:59" itemprop="dateCreated datePublished" datetime="2021-03-18T20:50:18+08:00">2021-03-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">CC &#x3D; g++</span><br><span class="line">TARGET &#x3D; base</span><br><span class="line"></span><br><span class="line">INCLUDE :&#x3D; -I.&#x2F;include</span><br><span class="line">LDFLAGS :&#x3D; -L&#x2F;usr&#x2F;local&#x2F;lib -L.</span><br><span class="line">LIBS :&#x3D; -lpthread</span><br><span class="line"></span><br><span class="line">SRCDIRS &#x3D; src</span><br><span class="line">OBJDIR &#x3D; obj</span><br><span class="line">DEPDIR &#x3D; dep</span><br><span class="line"></span><br><span class="line">DEFINES :&#x3D; -fpic -Wl,-rpath&#x3D;.</span><br><span class="line">COMMONFLAGS :&#x3D; -g -Wall -Wextra -pedantic -O3</span><br><span class="line">CFLAGS &#x3D; $(COMMONFLAGS) $(DEFINES) $(INCLUDE)</span><br><span class="line">CXXFLAGS &#x3D; $(CFLAGS)</span><br><span class="line">SRCS &#x3D; $(foreach dir,$(SRCDIRS), $(wildcard $(dir)&#x2F;*.c) $(wildcard $(dir)&#x2F;*.cpp))</span><br><span class="line">OBJS &#x3D; $(patsubst %.c,$(OBJDIR)&#x2F;%.o,$(patsubst %.cpp,$(OBJDIR)&#x2F;%.o,$(notdir $(SRCS))))</span><br><span class="line">DEPS &#x3D; $(patsubst %.c,$(DEPDIR)&#x2F;%.d,$(patsubst %.cpp,$(DEPDIR)&#x2F;%.d,$(notdir $(SRCS))))</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">	$(CC) -o $@ $^ $(LDFLAGS) $(LIBS)</span><br><span class="line"></span><br><span class="line">$(OBJDIR)&#x2F;%.o: $(SRCDIRS)&#x2F;%.c</span><br><span class="line">	@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi;</span><br><span class="line">	$(CC) $(CFLAGS) -c $&lt; -o $@</span><br><span class="line"></span><br><span class="line">$(OBJDIR)&#x2F;%.o: $(SRCDIRS)&#x2F;%.cpp</span><br><span class="line">	@if [ ! -d $(OBJDIR) ]; then mkdir -p $(OBJDIR); fi;</span><br><span class="line">	$(CC) $(CXXFLAGS) -c $&lt; -o $@</span><br><span class="line"></span><br><span class="line">$(DEPDIR)&#x2F;%.d: $(SRCDIRS)&#x2F;%.c</span><br><span class="line">	@if [ ! -d $(DEPDIR) ]; then mkdir -p $(DEPDIR); fi;\</span><br><span class="line">	$(CC) $(CPPFLAGS) $(INCLUDE) -MM $&lt; | sed -e 1&#39;s,^,$(OBJDIR)&#x2F;,&#39; &gt; $@</span><br><span class="line">$(DEPDIR)&#x2F;%.d: $(SRCDIRS)&#x2F;%.cpp</span><br><span class="line">	@if [ ! -d $(DEPDIR) ]; then mkdir -p $(DEPDIR); fi;\</span><br><span class="line">	$(CC) $(CPPFLAGS) $(INCLUDE) -MM $&lt; | sed -e 1&#39;s,^,$(OBJDIR)&#x2F;,&#39; &gt; $@</span><br><span class="line"></span><br><span class="line">-include $(DEPS)</span><br><span class="line"></span><br><span class="line">.PHONY:clean all</span><br><span class="line">	</span><br><span class="line">clean:</span><br><span class="line">	-rm -rf $(OBJDIR) $(DEPDIR) $(TARGET)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-18T20:50:18+08:00"
-              content="2021-03-18">
-          03-18
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/18/%E6%94%AF%E6%8C%81C%E5%92%8CC-%E6%B7%B7%E5%90%88%E7%BC%96%E8%AF%91%E7%9A%84Makefile/" itemprop="url">
-            <span itemprop="name">支持C和C++混合编译的Makefile</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/12/win10-hyperv-ubuntu/" rel="prev" title="win10 hyper-v 安装 ubuntu 遇到的问题">
+                  <i class="fa fa-chevron-left"></i> win10 hyper-v 安装 ubuntu 遇到的问题
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-03-12T22:12:59+08:00"
-              content="2021-03-12">
-          03-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/12/win10-hyperv-ubuntu/" itemprop="url">
-            <span itemprop="name">win10 hyper-v 安装 ubuntu 遇到的问题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+
 
 
 <script>
